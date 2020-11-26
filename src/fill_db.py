@@ -13,7 +13,7 @@ def fill_database():
         account_id = random.randint(1, 1000)
         size = random.randint(0, 20)
         side = random.choice(list(Side))
-        price = round(random.uniform(7.5, 15.5), 1)
+        price = round(random.uniform(9.5, 11), 1)
 
         order = Order(account_id=account_id,
                       timestamp_ns=time.time_ns(),
