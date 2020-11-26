@@ -1,7 +1,17 @@
-### :exclamation: Перед запуском скрипта main.py, создать файл .env
+### Установка и запуск
 ```
-DATABASE_URL=sqlite:///../db.sqlite3
-``` 
+git clone https://github.com/5kif4a/zubr-test-task.git
+cd zubr-test-task
+py -m venv venv
+venv/Scripts/activate
+pip install -r requirements.txt
+touch .env
+echo "DATABASE_URL=sqlite:///../db.sqlite3" > .env
+py create_db.py # создание бд
+py fill_db.py # долгий процесс - добавление в таблицу миллиона строк с рандомными значениями
+py main.py # нету CLI, все аргументы меняются в коде 
+```
+Ранжирование account_id: **1-1000**
 ### Задача
 Имеется таблица `orders`, в которой отражаются все именения по заявкам клиентов на бирже.  В таблице есть поля:
 
